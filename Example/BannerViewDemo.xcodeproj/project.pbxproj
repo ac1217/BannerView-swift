@@ -14,12 +14,13 @@
 		0722A3151E209BDC00DBA80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0722A3131E209BDC00DBA80F /* LaunchScreen.storyboard */; };
 		0722A3201E209BDC00DBA80F /* BannerViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A31F1E209BDC00DBA80F /* BannerViewDemoTests.swift */; };
 		0722A32B1E209BDC00DBA80F /* BannerViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A32A1E209BDC00DBA80F /* BannerViewDemoUITests.swift */; };
-		0722A33A1E209C2800DBA80F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3391E209C2800DBA80F /* BannerView.swift */; };
-		0722A33C1E209C3F00DBA80F /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A33B1E209C3F00DBA80F /* BannerCell.swift */; };
-		0722A33E1E209C8700DBA80F /* BannerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A33D1E209C8700DBA80F /* BannerProtocol.swift */; };
-		0722A3401E209E2E00DBA80F /* BannerMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A33F1E209E2E00DBA80F /* BannerMacro.swift */; };
-		0722A3421E20C2E700DBA80F /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3411E20C2E700DBA80F /* BannerModel.swift */; };
-		0722A34F1E20F93900DBA80F /* BannerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A34E1E20F93900DBA80F /* BannerExtension.swift */; };
+		0722A3581E21DE2600DBA80F /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3511E21DE2600DBA80F /* BannerCell.swift */; };
+		0722A3591E21DE2600DBA80F /* BannerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3521E21DE2600DBA80F /* BannerExtension.swift */; };
+		0722A35A1E21DE2600DBA80F /* BannerMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3531E21DE2600DBA80F /* BannerMacro.swift */; };
+		0722A35B1E21DE2600DBA80F /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3541E21DE2600DBA80F /* BannerModel.swift */; };
+		0722A35C1E21DE2600DBA80F /* BannerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3551E21DE2600DBA80F /* BannerProtocol.swift */; };
+		0722A35D1E21DE2600DBA80F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0722A3561E21DE2600DBA80F /* BannerView.swift */; };
+		0722A35E1E21DE2600DBA80F /* BannerViewDemo.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 0722A3571E21DE2600DBA80F /* BannerViewDemo.xcworkspace */; };
 		A0D5B32262F45CBE8910A880 /* Pods_BannerViewDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29AE4B8126B69FA1D4E0E4D2 /* Pods_BannerViewDemoTests.framework */; };
 		C3175A4C57034F215A0F0D3C /* Pods_BannerViewDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD8B171095CAFEA29CE1C28 /* Pods_BannerViewDemoUITests.framework */; };
 		C754E6F7CFBB079F2C9A662B /* Pods_BannerViewDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9205AB3539B1A982699BC3F8 /* Pods_BannerViewDemo.framework */; };
@@ -56,12 +57,13 @@
 		0722A3261E209BDC00DBA80F /* BannerViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BannerViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0722A32A1E209BDC00DBA80F /* BannerViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewDemoUITests.swift; sourceTree = "<group>"; };
 		0722A32C1E209BDC00DBA80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0722A3391E209C2800DBA80F /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
-		0722A33B1E209C3F00DBA80F /* BannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
-		0722A33D1E209C8700DBA80F /* BannerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerProtocol.swift; sourceTree = "<group>"; };
-		0722A33F1E209E2E00DBA80F /* BannerMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerMacro.swift; sourceTree = "<group>"; };
-		0722A3411E20C2E700DBA80F /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
-		0722A34E1E20F93900DBA80F /* BannerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerExtension.swift; sourceTree = "<group>"; };
+		0722A3511E21DE2600DBA80F /* BannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		0722A3521E21DE2600DBA80F /* BannerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerExtension.swift; sourceTree = "<group>"; };
+		0722A3531E21DE2600DBA80F /* BannerMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerMacro.swift; sourceTree = "<group>"; };
+		0722A3541E21DE2600DBA80F /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		0722A3551E21DE2600DBA80F /* BannerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerProtocol.swift; sourceTree = "<group>"; };
+		0722A3561E21DE2600DBA80F /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		0722A3571E21DE2600DBA80F /* BannerViewDemo.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = BannerViewDemo.xcworkspace; sourceTree = "<group>"; };
 		1DE154A2326DBB7502006EB0 /* Pods-BannerViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BannerViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BannerViewDemo/Pods-BannerViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		29AE4B8126B69FA1D4E0E4D2 /* Pods_BannerViewDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BannerViewDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0DA5C06E87B392078625C7 /* Pods-BannerViewDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BannerViewDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BannerViewDemoTests/Pods-BannerViewDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +128,7 @@
 		0722A3091E209BDC00DBA80F /* BannerViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0722A3381E209C1600DBA80F /* BannerView */,
+				0722A3501E21DE2600DBA80F /* BannerView */,
 				0722A30A1E209BDC00DBA80F /* AppDelegate.swift */,
 				0722A30C1E209BDC00DBA80F /* ViewController.swift */,
 				0722A30E1E209BDC00DBA80F /* Main.storyboard */,
@@ -155,18 +157,20 @@
 			path = BannerViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		0722A3381E209C1600DBA80F /* BannerView */ = {
+		0722A3501E21DE2600DBA80F /* BannerView */ = {
 			isa = PBXGroup;
 			children = (
-				0722A3391E209C2800DBA80F /* BannerView.swift */,
-				0722A33B1E209C3F00DBA80F /* BannerCell.swift */,
-				0722A33D1E209C8700DBA80F /* BannerProtocol.swift */,
-				0722A33F1E209E2E00DBA80F /* BannerMacro.swift */,
-				0722A3411E20C2E700DBA80F /* BannerModel.swift */,
-				0722A34E1E20F93900DBA80F /* BannerExtension.swift */,
+				0722A3511E21DE2600DBA80F /* BannerCell.swift */,
+				0722A3521E21DE2600DBA80F /* BannerExtension.swift */,
+				0722A3531E21DE2600DBA80F /* BannerMacro.swift */,
+				0722A3541E21DE2600DBA80F /* BannerModel.swift */,
+				0722A3551E21DE2600DBA80F /* BannerProtocol.swift */,
+				0722A3561E21DE2600DBA80F /* BannerView.swift */,
+				0722A3571E21DE2600DBA80F /* BannerViewDemo.xcworkspace */,
 			);
-			path = BannerView;
-			sourceTree = SOURCE_ROOT;
+			name = BannerView;
+			path = ../../BannerView;
+			sourceTree = "<group>";
 		};
 		3579032F0AE358566F42D172 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -310,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0722A35E1E21DE2600DBA80F /* BannerViewDemo.xcworkspace in Resources */,
 				0722A3151E209BDC00DBA80F /* LaunchScreen.storyboard in Resources */,
 				0722A3121E209BDC00DBA80F /* Assets.xcassets in Resources */,
 				0722A3101E209BDC00DBA80F /* Main.storyboard in Resources */,
@@ -476,13 +481,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0722A30D1E209BDC00DBA80F /* ViewController.swift in Sources */,
-				0722A33C1E209C3F00DBA80F /* BannerCell.swift in Sources */,
-				0722A3421E20C2E700DBA80F /* BannerModel.swift in Sources */,
-				0722A34F1E20F93900DBA80F /* BannerExtension.swift in Sources */,
-				0722A33E1E209C8700DBA80F /* BannerProtocol.swift in Sources */,
 				0722A30B1E209BDC00DBA80F /* AppDelegate.swift in Sources */,
-				0722A3401E209E2E00DBA80F /* BannerMacro.swift in Sources */,
-				0722A33A1E209C2800DBA80F /* BannerView.swift in Sources */,
+				0722A3581E21DE2600DBA80F /* BannerCell.swift in Sources */,
+				0722A35B1E21DE2600DBA80F /* BannerModel.swift in Sources */,
+				0722A35D1E21DE2600DBA80F /* BannerView.swift in Sources */,
+				0722A3591E21DE2600DBA80F /* BannerExtension.swift in Sources */,
+				0722A35C1E21DE2600DBA80F /* BannerProtocol.swift in Sources */,
+				0722A35A1E21DE2600DBA80F /* BannerMacro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
