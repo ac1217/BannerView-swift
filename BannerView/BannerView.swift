@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 private let kNumberRatio = 100
 
 let kBannerViewContentOffsetYDidChangeNotification = "kBannerViewContentOffsetYDidChangeNotification"
@@ -31,20 +30,19 @@ open class BannerView: UIView {
         }
     }
     
-    var timeInterval: TimeInterval = 3
+    public var timeInterval: TimeInterval = 3
     
-    var isRepeat: Bool = true
+    public var isRepeat: Bool = true
     
-    var scrollDirection = UICollectionViewScrollDirection.horizontal {
+    public var scrollDirection = UICollectionViewScrollDirection.horizontal {
         didSet {
             layout.scrollDirection = scrollDirection
         }
     }
 
-    var pageControlPosition = BannerViewPageControlPosition.right
+    public var pageControlPosition = BannerViewPageControlPosition.right
     
-    
-    func reloadData() {
+    public func reloadData() {
         
         guard let dataSource = dataSource else {
             return
@@ -81,7 +79,7 @@ open class BannerView: UIView {
     }
     
     
-    var contentOffsetY: CGFloat = 0 {
+    public var contentOffsetY: CGFloat = 0 {
         didSet{
             
             if (contentOffsetY >= 0)
@@ -108,7 +106,7 @@ open class BannerView: UIView {
     }
     
     
-    func start() {
+    public func start() {
         
         
         let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.main)
@@ -127,7 +125,7 @@ open class BannerView: UIView {
         
     }
     
-    func stop() {
+    public func stop() {
         
         timer?.cancel()
         timer = nil
@@ -163,10 +161,6 @@ open class BannerView: UIView {
     
     
     fileprivate var timer: DispatchSourceTimer?
-    
-    
-    
-    
     
     fileprivate func nextPage() {
         

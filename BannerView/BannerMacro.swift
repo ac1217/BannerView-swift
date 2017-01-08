@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum BannerViewPageControlPosition {
+public enum BannerViewPageControlPosition {
     case center
     case left
     case right

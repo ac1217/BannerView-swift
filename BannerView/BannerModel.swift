@@ -12,4 +12,6 @@ struct BannerModel: BannerResource {
 
     public var imageResource: Any
     
+    
+    
 }
