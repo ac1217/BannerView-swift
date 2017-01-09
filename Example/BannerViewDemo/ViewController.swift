@@ -51,6 +51,20 @@ class ViewController: UIViewController, BannerViewDataSource, BannerViewDelegate
         scrollView.addSubview(bannerView)
         
         
+        let btn = UIButton()
+        btn.backgroundColor = UIColor.red
+        
+        view.addSubview(btn)
+        
+        btn.frame = CGRect(x: 50, y: 350, width: 100, height: 100)
+        
+        btn.addTarget(self, action: #selector(ViewController.btnClick), for: .touchUpInside)
+    }
+    
+    func btnClick() {
+        
+        bannerView.reloadData()
+        
     }
 
     override func viewDidLayoutSubviews() {
@@ -67,6 +81,14 @@ extension ViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         bannerView.contentOffsetY = scrollView.contentOffset.y
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        bannerView.stop()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        bannerView.start()
     }
     
 }

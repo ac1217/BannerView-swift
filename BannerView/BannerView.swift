@@ -48,18 +48,22 @@ open class BannerView: UIView {
             return
         }
         
+        let previousNumber = pageControl.numberOfPages
+        
         pageControl.numberOfPages = dataSource.numberOfBanners(in: self)
+        setNeedsLayout()
         collectionView.reloadData()
         
-        stop()
-        
-        if !isRepeat || pageControl.numberOfPages < 2 {
-            return
-        }
+        collectionView.isScrollEnabled = pageControl.numberOfPages > 1
         
         start()
         
+        if previousNumber == pageControl.numberOfPages {
+            return
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+            
             let indexPath = IndexPath(item: kNumberRatio * self.pageControl.numberOfPages / 2, section: 0)
             
             if (self.layout.scrollDirection == .horizontal) {
@@ -73,8 +77,7 @@ open class BannerView: UIView {
             }
             
         }
-        
-        
+
         
     }
     
@@ -108,6 +111,14 @@ open class BannerView: UIView {
     
     public func start() {
         
+        if !isRepeat || pageControl.numberOfPages < 2 {
+            return
+        }
+        
+        if self.timer != nil {
+            stop()
+        }
+        
         
         let timer = DispatchSource.makeTimerSource(queue: DispatchQueue.main)
         
@@ -122,6 +133,7 @@ open class BannerView: UIView {
         timer.resume()
         
         self.timer = timer
+        
         
     }
     
@@ -243,7 +255,7 @@ extension BannerView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSo
         
         let number = pageControl.numberOfPages
         
-        return number > 1 ? number * kNumberRatio : number
+        return number * kNumberRatio
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
