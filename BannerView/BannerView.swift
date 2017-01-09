@@ -164,7 +164,7 @@ open class BannerView: UIView {
     
     fileprivate func nextPage() {
         
-        let indexPath = collectionView.indexPathsForVisibleItems.last!
+        guard let indexPath = collectionView.indexPathsForVisibleItems.last else { return }
         let number = pageControl.numberOfPages
         let item = kNumberRatio * number / 2 + indexPath.item % number
         
@@ -183,7 +183,7 @@ open class BannerView: UIView {
         stop()
     }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
