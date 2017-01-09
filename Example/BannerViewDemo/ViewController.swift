@@ -27,7 +27,10 @@ class ViewController: UIViewController, BannerViewDataSource, BannerViewDelegate
         
         
         BannerModel(imageResource: "http://pic29.nipic.com/20130530/6434097_113007064309_2.jpg"),
-        BannerModel(imageResource: "http://pic50.nipic.com/file/20141010/19650248_153632125000_2.jpg")
+        BannerModel(imageResource: "http://pic50.nipic.com/file/20141010/19650248_153632125000_2.jpg"),
+        BannerModel(imageResource: "http://pic29.nipic.com/20130530/6434097_113007064309_2.jpg"),
+        BannerModel(imageResource: "http://pic50.nipic.com/file/20141010/19650248_153632125000_2.jpg"),
+        BannerModel(imageResource: "http://pic29.nipic.com/20130530/6434097_113007064309_2.jpg")
     
     ]
     
@@ -37,7 +40,7 @@ class ViewController: UIViewController, BannerViewDataSource, BannerViewDelegate
         let b = BannerView()
         b.dataSource = self
         b.delegate = self
-        
+//        b.isRepeat = false
         return b
     }()
 
@@ -49,7 +52,6 @@ class ViewController: UIViewController, BannerViewDataSource, BannerViewDelegate
         scrollView.alwaysBounceVertical = true
         scrollView.delegate = self
         scrollView.addSubview(bannerView)
-        
         
         let btn = UIButton()
         btn.backgroundColor = UIColor.red

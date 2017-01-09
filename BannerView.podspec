@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "BannerView"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "the swift imp of KCBannerView"
 
   # This description is used to generate tags and improve search results.
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ac1217/BannerView-swift.git", :tag => "0.0.5" }
+  s.source       = { :git => "https://github.com/ac1217/BannerView-swift.git", :tag => "0.0.6" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

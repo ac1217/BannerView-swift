@@ -17,6 +17,8 @@ open class BannerView: UIView {
     public lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
         pc.hidesForSinglePage = true
+        pc.addTarget(self, action: #selector(BannerView.pageChange), for: .valueChanged)
+        
         return pc
     }()
     
@@ -32,7 +34,13 @@ open class BannerView: UIView {
     
     public var timeInterval: TimeInterval = 3
     
-    public var isRepeat: Bool = true
+    public var isRepeat: Bool = true {
+        didSet{
+            if !isRepeat {
+                stop()
+            }
+        }
+    }
     
     public var scrollDirection = UICollectionViewScrollDirection.horizontal {
         didSet {
@@ -217,13 +225,14 @@ open class BannerView: UIView {
         
         collectionView.frame = bounds
         
-        let margin: CGFloat = 15;
+        let margin: CGFloat = 10;
         
-        var pageControlSize = pageControl.size(forNumberOfPages: pageControl.numberOfPages)
-        pageControlSize.height -= margin
-        
+        let pageControlSize = pageControl.size(forNumberOfPages: pageControl.numberOfPages)
+
         var pageControlX: CGFloat = 0
         let pageControlY = frame.height - pageControlSize.height
+        
+//        pageControl.backgroundColor = UIColor.red
         
         switch pageControlPosition {
         case .right:
@@ -239,6 +248,27 @@ open class BannerView: UIView {
         
         pageControl.frame = CGRect(origin: CGPoint(x: pageControlX, y: pageControlY), size: pageControlSize)
         
+        
+    }
+    
+    func pageChange() {
+        
+        stop()
+        
+        let page = pageControl.currentPage
+        
+        guard let indexPath = collectionView.indexPathsForVisibleItems.last else { return }
+        
+        let section = indexPath.item -  indexPath.item % pageControl.numberOfPages
+        
+        
+         let nextIndexPath = IndexPath(item: section + page, section: 0)
+        
+        let scrollPosition = (layout.scrollDirection == .horizontal) ? UICollectionViewScrollPosition.centeredHorizontally : UICollectionViewScrollPosition.centeredVertically
+        
+        collectionView.scrollToItem(at: nextIndexPath, at: scrollPosition, animated: true)
+        
+        start()
         
     }
     
@@ -288,8 +318,11 @@ extension BannerView: UIScrollViewDelegate {
         start()
     }
     
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        scrollViewDidEndDecelerating(scrollView)
+    }
+    
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let number = pageControl.numberOfPages
         
         if number == 0 { return }
@@ -299,15 +332,15 @@ extension BannerView: UIScrollViewDelegate {
         switch layout.scrollDirection {
         case .horizontal:
             
-            currentPage = Int((scrollView.contentOffset.x / scrollView.bounds.size.width + 0.5)) % number;
+            currentPage = Int((scrollView.contentOffset.x / scrollView.bounds.size.width)) % number;
             
         default:
             
-            currentPage = Int((scrollView.contentOffset.y / scrollView.bounds.size.height + 0.5)) % number;
+            currentPage = Int((scrollView.contentOffset.y / scrollView.bounds.size.height)) % number;
         }
         
         pageControl.currentPage = currentPage
-        
     }
+    
     
 }
